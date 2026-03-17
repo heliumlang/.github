@@ -25,15 +25,16 @@ It tries to be as pragmatic as possible, avoiding abstraction and letting the us
 ### Variables and Types
 
 ```c
-int count = 10
-float pi = 3.14159
-bool active = true
+int count = 10;
+double pi = 3.14159;
+bool active = true;
+ulong id = 9143145u;
 ```
 
 ### Functions
 
 ```c
-func add(int a, int b) -> int {
+int add(int a, int b) {
     return a + b
 }
 ```
