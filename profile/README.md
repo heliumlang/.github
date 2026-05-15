@@ -1,52 +1,37 @@
-<center> <img width="200" style="border-radius: 12%" alt="logo" src="https://github.com/user-attachments/assets/90209e62-3fcb-4ce4-ab63-773202c8b1dd" /> </center>
+<h1 align="center"><strong>Helium</strong></h1>
+<p align="center"><em><small>Modern scripting language</small></em></p>
 
-# C² Language
+Helium is a simple scripting language that ensures safety, correctness and ease of use.
 
-A simple and efficient programming language designed for modern software development.
+```rust
+mod main
 
-## Overview
+struct Point {
+    pub int x
+    pub int y
+}
 
-C² is a compiled language that combines the performance of low-level languages with the simplicity and readability of high-level languages.
+fn [a Point] add(Point b) Point {
+    return new Point(x: a.x + b.x, y: a.y + b.y)
+}
 
-It tries to be as pragmatic as possible, avoiding abstraction and letting the user control the behavior of the language, instead of they being controlled by C².
+struct Person {
+    pub string name
+    pub string surname
+    pub string fullname
 
-## Features
+    init(string name, string surname) {
+        @name = name
+        @surname = surname
+        @fullname = name + ' ' + surname
+    }
+}
 
-- Static typing with type inference
-- Memory safe compilation
-- Fast execution
-- Simple syntax
-- Cross-platform support
+fn main() {
+    p1, p2 := new Point(x: 5, y: 2), new Point(x: 3, y: 1)
+    p3 := p1.add(p2)
 
-## Getting Started
-
-## Basic Syntax
-
-### Variables and Types
-
-```c
-int count = 10;
-double pi = 3.14159;
-bool active = true;
-ulong id = 9143145u;
-```
-
-### Functions
-
-```c
-int add(int a, int b) {
-    return a + b
+    person := new Person("John", "Doe")
+    println(person.fullname)
 }
 ```
-
-### Control Flow
-
-```c
-if (count > 5) {
-    // Greater than
-} else {
-    // Less or Equal than 
-}
-```
-
-**You can find more information [here](https://github.com/C2-Lang)**
